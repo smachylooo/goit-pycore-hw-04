@@ -1,12 +1,12 @@
 def get_cats_lst(path):
-        cats_lst = []
-        try:
-            with open(path, 'r', encoding='utf-8') as file:
-                for row in file:
-                    cats_lst.append(row.strip().split(','))
-            return cats_lst
-        except FileNotFoundError:
-             return "File not found"
+    cats_lst = []
+    try:
+        with open(path, 'r', encoding='utf-8') as file:
+            for row in file:
+                cats_lst.append(row.strip().split(','))
+        return cats_lst
+    except FileNotFoundError:
+         return "File not found"
         
 def get_cats_by_id(cats):
     if not cats:
